@@ -25,7 +25,7 @@ execute_process(COMMAND uname -m COMMAND tr -d '\n' OUTPUT_VARIABLE ARCHITECTURE
 message(STATUS "Architecture: ${ARCHITECTURE}")
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ARCH_SPECIFIC_FLAGS} -Winline -W -Wall -fomit-frame-pointer -fno-rtti -fno-exceptions")
-set(CMAKE_EXE_LINKER_FLAGS "-Wl,-flto,-s")
+set(CMAKE_EXE_LINKER_FLAGS "-Wl,-s")
 #set(CMAKE_EXE_LINKER_FLAGS "-Wl,-O1,-s,--no-export-dynamic")
 
 add_library(${PROJECT_NAME}
