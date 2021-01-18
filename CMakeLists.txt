@@ -29,7 +29,7 @@ set(CMAKE_EXE_LINKER_FLAGS "-Wl,-s")
 #set(CMAKE_EXE_LINKER_FLAGS "-Wl,-O1,-s,--no-export-dynamic")
 
 add_library(${PROJECT_NAME}
-    SHARED
+  STATIC
     ${libiz_SRCS}
   )
 set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${IZ_VERSION} SOVERSION ${MAJOR_VERSION})
