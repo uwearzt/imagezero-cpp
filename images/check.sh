@@ -10,5 +10,5 @@ for pic in $(ls *.ppm); do
   diff ${pic} ${base}.new
 done
 
-rm *.iz
+# rm *.iz
 rm *.new

@@ -4,7 +4,7 @@
 
 namespace IZ
 {
-  unsigned char* encodeImage(const Image<>& im, unsigned char* dest)
+  unsigned char* encodeImage(const Image& im, unsigned char* dest)
   {
     ImageEncoder<> ic;
     ic.begin(dest);
@@ -13,7 +13,7 @@ namespace IZ
     return ic.end();
   }
 
-  const unsigned char* decodeImage(Image<>& im, const unsigned char* src)
+  const unsigned char* decodeImage(Image& im, const unsigned char* src)
   {
     ImageDecoder<> ic;
     ic.begin(src);
@@ -22,7 +22,7 @@ namespace IZ
     return ic.end();
   }
 
-  void decodeImageSize(Image<>& im, const unsigned char* src)
+  void decodeImageSize(Image& im, const unsigned char* src)
   {
     ImageDecoder<> ic;
     ic.begin(src);

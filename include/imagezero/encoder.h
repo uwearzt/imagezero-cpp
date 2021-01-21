@@ -37,7 +37,7 @@ public:
         memcpy(dCount, staticdCount, sizeof(dCount));
     }
 
-    void encodeImagePixels(const Image<> &im) __attribute__((always_inline)) {
+    void encodeImagePixels(const Image &im) __attribute__((always_inline)) {
         const int bpr = im.samplesPerLine();
         const unsigned char *p = im.data();
         int size = im.width() * im.height();
@@ -62,7 +62,7 @@ public:
         }
     }
 
-    void encodeImageSize(const Image<> &im) {
+    void encodeImageSize(const Image &im) {
         int w = im.width() - 1;
         int h = im.height() - 1;
         int b = IZ::numBits(w | h);

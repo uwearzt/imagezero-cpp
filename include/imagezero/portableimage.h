@@ -5,7 +5,7 @@
 
 namespace IZ
 {
-  class PortableImage : public IZ::Image<>
+  class PortableImage : public IZ::Image
   {
   public:
     PortableImage();
